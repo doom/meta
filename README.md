@@ -1,2 +1,2 @@
 # meta
-Metaprogramming utilities in C++
+Just a few metaprogramming utilities in C++
