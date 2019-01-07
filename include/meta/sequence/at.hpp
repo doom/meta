@@ -2,11 +2,11 @@
 ** Created by doom on 29/11/18.
 */
 
-#ifndef META_AT_HPP
-#define META_AT_HPP
+#ifndef META_SEQUENCE_AT_HPP
+#define META_SEQUENCE_AT_HPP
 
 #include <utility>
-#include <meta/list.hpp>
+#include <meta/sequence/list.hpp>
 
 namespace meta
 {
@@ -48,4 +48,4 @@ namespace meta
     using at = typename details::at<I, Sequence>::type;
 }
 
-#endif /* !META_AT_HPP */
+#endif /* !META_SEQUENCE_AT_HPP */

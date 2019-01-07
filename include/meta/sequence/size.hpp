@@ -2,11 +2,12 @@
 ** Created by doom on 29/11/18.
 */
 
-#ifndef META_SIZE_HPP
-#define META_SIZE_HPP
+#ifndef META_SEQUENCE_SIZE_HPP
+#define META_SEQUENCE_SIZE_HPP
 
+#include <cstddef>
 #include <type_traits>
-#include <meta/list.hpp>
+#include <meta/sequence/list.hpp>
 
 namespace meta
 {
@@ -19,4 +20,4 @@ namespace meta
     };
 }
 
-#endif /* !META_SIZE_HPP */
+#endif /* !META_SEQUENCE_SIZE_HPP */

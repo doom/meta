@@ -7,17 +7,29 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 
 set(META_SOURCES
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/details/flatten_helper.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/details/pow2.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/concat.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/size.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/flatten.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/join.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/map.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/filter.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/at.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/list.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/meta.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/drop_helper.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/flatten_helper.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/foldl_helper.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/rotate_helper.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/pow2.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/all.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/any.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/at.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/concat.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/drop.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/first.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/filter.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/flatten.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/foldl.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/join.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/last.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/list.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/map.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/rotate.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/sequence.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/size.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/split_at.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/take.hpp
         )
 
 add_library(meta INTERFACE)

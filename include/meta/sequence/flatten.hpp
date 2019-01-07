@@ -2,12 +2,12 @@
 ** Created by doom on 29/11/18.
 */
 
-#ifndef META_FLATTEN_HPP
-#define META_FLATTEN_HPP
+#ifndef META_SEQUENCE_FLATTEN_HPP
+#define META_SEQUENCE_FLATTEN_HPP
 
-#include <meta/details/pow2.hpp>
-#include <meta/details/flatten_helper.hpp>
-#include <meta/list.hpp>
+#include <meta/sequence/details/pow2.hpp>
+#include <meta/sequence/details/flatten_helper.hpp>
+#include <meta/sequence/list.hpp>
 
 namespace meta
 {
@@ -31,4 +31,4 @@ namespace meta
     using flatten = typename details::flatten<Sequence>::type;
 }
 
-#endif /* !META_FLATTEN_HPP */
+#endif /* !META_SEQUENCE_FLATTEN_HPP */

@@ -2,11 +2,11 @@
 ** Created by doom on 29/11/18.
 */
 
-#ifndef META_JOIN_HPP
-#define META_JOIN_HPP
+#ifndef META_SEQUENCE_JOIN_HPP
+#define META_SEQUENCE_JOIN_HPP
 
-#include <meta/list.hpp>
-#include <meta/flatten.hpp>
+#include <meta/sequence/list.hpp>
+#include <meta/sequence/flatten.hpp>
 
 namespace meta
 {
@@ -17,4 +17,4 @@ namespace meta
     using join = flatten<list<Lists...>>;
 }
 
-#endif /* !META_JOIN_HPP */
+#endif /* !META_SEQUENCE_JOIN_HPP */

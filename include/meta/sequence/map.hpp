@@ -2,10 +2,10 @@
 ** Created by doom on 29/11/18.
 */
 
-#ifndef META_MAP_HPP
-#define META_MAP_HPP
+#ifndef META_SEQUENCE_MAP_HPP
+#define META_SEQUENCE_MAP_HPP
 
-#include <meta/list.hpp>
+#include <meta/sequence/list.hpp>
 
 namespace meta
 {
@@ -28,4 +28,4 @@ namespace meta
     using map = typename details::map<MetaF, Sequence>::type;
 }
 
-#endif /* !META_MAP_HPP */
+#endif /* !META_SEQUENCE_MAP_HPP */

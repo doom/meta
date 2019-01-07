@@ -2,10 +2,10 @@
 ** Created by doom on 29/11/18.
 */
 
-#ifndef META_CONCAT_HPP
-#define META_CONCAT_HPP
+#ifndef META_SEQUENCE_CONCAT_HPP
+#define META_SEQUENCE_CONCAT_HPP
 
-#include <meta/list.hpp>
+#include <meta/sequence/list.hpp>
 
 namespace meta
 {
@@ -28,4 +28,4 @@ namespace meta
     using concat = typename details::concat<Sequence, OtherSequence>::type;
 }
 
-#endif /* !META_CONCAT_HPP */
+#endif /* !META_SEQUENCE_CONCAT_HPP */

@@ -2,13 +2,13 @@
 ** Created by doom on 29/11/18.
 */
 
-#ifndef META_FILTER_HPP
-#define META_FILTER_HPP
+#ifndef META_SEQUENCE_FILTER_HPP
+#define META_SEQUENCE_FILTER_HPP
 
 #include <type_traits>
-#include <meta/list.hpp>
-#include <meta/map.hpp>
-#include <meta/flatten.hpp>
+#include <meta/sequence/list.hpp>
+#include <meta/sequence/map.hpp>
+#include <meta/sequence/flatten.hpp>
 
 namespace meta
 {
@@ -29,4 +29,4 @@ namespace meta
     using filter = flatten<map<details::list_or_empty<MetaF>::template f, Sequence>>;
 }
 
-#endif /* !META_FILTER_HPP */
+#endif /* !META_SEQUENCE_FILTER_HPP */
