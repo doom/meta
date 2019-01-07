@@ -30,6 +30,8 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/size.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/split_at.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/take.hpp
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/detection/detection.hpp
         )
 
 add_library(meta INTERFACE)
@@ -40,6 +42,7 @@ target_include_directories(meta INTERFACE include)
 
 add_executable(meta-tests
         tests/tests-type_list.cpp
+        tests/tests-detection.cpp
         tests/tests-main.cpp)
 
 target_link_libraries(meta-tests meta)
