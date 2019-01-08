@@ -115,3 +115,8 @@ using F = meta::list<meta::list<int, char>, meta::list<bool>>;
 using G = meta::list<meta::list<int, char, bool>, meta::list<>>;
 static_assert(std::is_same_v<meta::split_at<int_char_bool, 2>, F>);
 static_assert(std::is_same_v<meta::split_at<int_char_bool, 3>, G>);
+
+static_assert(std::is_same_v<meta::append<int_char_bool, int>, meta::list<int, char, bool, int>>);
+
+static_assert(std::is_same_v<meta::insert_at<int_char_bool, 2, int>, meta::list<int, char, int, bool>>);
+static_assert(std::is_same_v<meta::insert_at<int_char_bool, 0, int>, meta::list<int, int, char, bool>>);

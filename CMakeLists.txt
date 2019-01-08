@@ -14,14 +14,16 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/pow2.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/all.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/any.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/append.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/at.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/concat.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/cons.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/drop.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/head.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/filter.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/flatten.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/foldl.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/head.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/insert_at.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/join.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/last.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/list.hpp

@@ -7,6 +7,7 @@
 
 #include <meta/sequence/all.hpp>
 #include <meta/sequence/any.hpp>
+#include <meta/sequence/append.hpp>
 #include <meta/sequence/at.hpp>
 #include <meta/sequence/concat.hpp>
 #include <meta/sequence/cons.hpp>
@@ -15,6 +16,7 @@
 #include <meta/sequence/foldl.hpp>
 #include <meta/sequence/flatten.hpp>
 #include <meta/sequence/head.hpp>
+#include <meta/sequence/insert_at.hpp>
 #include <meta/sequence/join.hpp>
 #include <meta/sequence/last.hpp>
 #include <meta/sequence/list.hpp>
