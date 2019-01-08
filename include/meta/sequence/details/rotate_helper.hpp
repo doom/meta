@@ -2,8 +2,8 @@
 ** Created by doom on 01/01/19.
 */
 
-#ifndef META_ROTATE_HELPER_HPP
-#define META_ROTATE_HELPER_HPP
+#ifndef META_SEQUENCE_DETAILS_ROTATE_HELPER_HPP
+#define META_SEQUENCE_DETAILS_ROTATE_HELPER_HPP
 
 #include <cstddef>
 
@@ -172,4 +172,4 @@ namespace meta
     }
 }
 
-#endif /* !META_ROTATE_HELPER_HPP */
+#endif /* !META_SEQUENCE_DETAILS_ROTATE_HELPER_HPP */

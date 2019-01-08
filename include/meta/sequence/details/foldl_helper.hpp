@@ -2,8 +2,8 @@
 ** Created by doom on 30/12/18.
 */
 
-#ifndef META_FOLDL_HELPER_HPP
-#define META_FOLDL_HELPER_HPP
+#ifndef META_SEQUENCE_DETAILS_FOLDL_HELPER_HPP
+#define META_SEQUENCE_DETAILS_FOLDL_HELPER_HPP
 
 #include <cstddef>
 
@@ -243,4 +243,4 @@ namespace meta
     }
 }
 
-#endif /* !META_FOLDL_HELPER_HPP */
+#endif /* !META_SEQUENCE_DETAILS_FOLDL_HELPER_HPP */

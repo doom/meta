@@ -2,8 +2,8 @@
 ** Created by doom on 31/10/18.
 */
 
-#ifndef META_POW2_HPP
-#define META_POW2_HPP
+#ifndef META_SEQUENCE_DETAILS_POW2_HPP
+#define META_SEQUENCE_DETAILS_POW2_HPP
 
 #include <cstddef>
 
@@ -34,4 +34,4 @@ namespace meta::details
     }
 }
 
-#endif /* !META_POW2_HPP */
+#endif /* !META_SEQUENCE_DETAILS_POW2_HPP */

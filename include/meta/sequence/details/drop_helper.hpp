@@ -2,8 +2,8 @@
 ** Created by doom on 02/01/19.
 */
 
-#ifndef META_SEQUENCE_DROP_HELPER_HPP
-#define META_SEQUENCE_DROP_HELPER_HPP
+#ifndef META_SEQUENCE_DETAILS_DROP_HELPER_HPP
+#define META_SEQUENCE_DETAILS_DROP_HELPER_HPP
 
 #include <cstddef>
 
@@ -136,4 +136,4 @@ namespace meta
     }
 }
 
-#endif /* !META_SEQUENCE_DROP_HELPER_HPP */
+#endif /* !META_SEQUENCE_DETAILS_DROP_HELPER_HPP */
