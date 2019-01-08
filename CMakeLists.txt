@@ -16,8 +16,9 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/any.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/at.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/concat.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/cons.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/drop.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/first.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/head.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/filter.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/flatten.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/foldl.hpp
@@ -29,6 +30,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/sequence.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/size.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/split_at.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/tail.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/take.hpp
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/detection/detection.hpp

@@ -91,8 +91,12 @@ using nums = meta::list<
     int_<111>, int_<112>, int_<113>, int_<114>, int_<115>, int_<116>, int_<117>, int_<118>, int_<119>>;
 static_assert(meta::foldl<meta_add, int_<0>, nums>::value == 7140);
 
-static_assert(std::is_same_v<meta::first<nums>, int_<0>>);
+static_assert(std::is_same_v<meta::head<nums>, int_<0>>);
 static_assert(std::is_same_v<meta::last<nums>, int_<119>>);
+static_assert(std::is_same_v<meta::tail<int_char_bool>, meta::list<char, bool>>);
+
+static_assert(std::is_same_v<meta::cons<int, meta::list<>>, meta::list<int>>);
+static_assert(std::is_same_v<meta::cons<int, meta::list<char, bool>>, int_char_bool>);
 
 static_assert(std::is_same_v<meta::rotate<int_char_bool, 1>, meta::list<char, bool, int>>);
 static_assert(std::is_same_v<meta::rotate<int_char_bool, 4>, meta::list<char, bool, int>>);
