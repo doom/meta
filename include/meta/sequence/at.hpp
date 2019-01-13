@@ -18,10 +18,10 @@ namespace meta
         };
 
         template <typename IndexSeqR, typename ...Types>
-        struct index;
+        struct indexed_list;
 
         template <std::size_t ...Idx, typename ...Types>
-        struct index<std::index_sequence<Idx...>, Types...> : indexed_element<Idx, Types>...
+        struct indexed_list<std::index_sequence<Idx...>, Types...> : indexed_element<Idx, Types>...
         {
         };
 
@@ -36,7 +36,7 @@ namespace meta
             template <typename T>
             static T get(indexed_element<I, T>);
 
-            using index_type = index<std::make_index_sequence<sizeof...(Types)>, Types...>;
+            using index_type = indexed_list<std::make_index_sequence<sizeof...(Types)>, Types...>;
             using type = decltype(at::get(index_type{}));
         };
     }

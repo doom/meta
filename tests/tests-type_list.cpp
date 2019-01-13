@@ -120,3 +120,25 @@ static_assert(std::is_same_v<meta::append<int_char_bool, int>, meta::list<int, c
 
 static_assert(std::is_same_v<meta::insert_at<int_char_bool, 2, int>, meta::list<int, char, int, bool>>);
 static_assert(std::is_same_v<meta::insert_at<int_char_bool, 0, int>, meta::list<int, int, char, bool>>);
+
+template <typename T>
+using is_bool = std::is_same<T, bool>;
+
+template <typename T>
+using is_double = std::is_same<T, double>;
+
+template <typename T>
+using is_int = std::is_same<T, int>;
+
+template <typename T>
+using is_118 = std::is_same<int_<118>, T>;
+
+template <typename T>
+using is_62 = std::is_same<int_<62>, T>;
+
+static_assert(meta::index<is_bool, int_char_bool>::value == 2);
+static_assert(meta::index<is_int, regular_types>::value == 0);
+static_assert(meta::index<is_double, regular_types>::value == 3);
+static_assert(meta::index<is_62, nums>::value == 62);
+static_assert(meta::index<is_118, nums>::value == 118);
+static_assert(meta::index<is_int, meta::list<int>>::value == 0);
