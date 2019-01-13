@@ -3,7 +3,10 @@
 */
 
 #include <type_traits>
+#include <meta/utils/integral_constants.hpp>
 #include <meta/sequence/sequence.hpp>
+
+using meta::size_constant;
 
 static_assert(meta::size<meta::list<int, char, bool>>::value == 3);
 static_assert(meta::size<meta::list<int, char>>::value == 2);
@@ -57,10 +60,10 @@ static_assert(std::is_same_v<meta::list<>, meta::filter<std::is_reference, regul
 static_assert(std::is_same_v<pointer_types, meta::filter<std::is_pointer, pointer_types>>);
 static_assert(std::is_same_v<meta::list<int *, char *, float *>, meta::filter<std::is_pointer, E>>);
 
-static_assert(std::is_same_v<meta::at<E, 2>, char>);
-static_assert(std::is_same_v<meta::at<E, 0>, int>);
-static_assert(std::is_same_v<meta::at<pointer_types, 30>, int *>);
-static_assert(std::is_same_v<meta::at<regular_types, 30>, int>);
+static_assert(std::is_same_v<meta::at<E, size_constant<2>>, char>);
+static_assert(std::is_same_v<meta::at<E, size_constant<0>>, int>);
+static_assert(std::is_same_v<meta::at<pointer_types, size_constant<30>>, int *>);
+static_assert(std::is_same_v<meta::at<regular_types, size_constant<30>>, int>);
 
 static_assert(meta::all<std::is_pointer, pointer_types>::value);
 static_assert(not meta::all<std::is_pointer, regular_types>::value);
@@ -98,28 +101,28 @@ static_assert(std::is_same_v<meta::tail<int_char_bool>, meta::list<char, bool>>)
 static_assert(std::is_same_v<meta::cons<int, meta::list<>>, meta::list<int>>);
 static_assert(std::is_same_v<meta::cons<int, meta::list<char, bool>>, int_char_bool>);
 
-static_assert(std::is_same_v<meta::rotate<int_char_bool, 1>, meta::list<char, bool, int>>);
-static_assert(std::is_same_v<meta::rotate<int_char_bool, 4>, meta::list<char, bool, int>>);
-static_assert(std::is_same_v<meta::rotate<pointer_types, 10>, pointer_types>);
+static_assert(std::is_same_v<meta::rotate<int_char_bool, size_constant<1>>, meta::list<char, bool, int>>);
+static_assert(std::is_same_v<meta::rotate<int_char_bool, size_constant<4>>, meta::list<char, bool, int>>);
+static_assert(std::is_same_v<meta::rotate<pointer_types, size_constant<10>>, pointer_types>);
 
-static_assert(std::is_same_v<meta::drop<int_char_bool, 1>, meta::list<char, bool>>);
-static_assert(std::is_same_v<meta::drop<int_char_bool, 40>, meta::list<>>);
-static_assert(meta::foldl<meta_add, int_<0>, meta::drop<nums, 11>>::value == 7085);
+static_assert(std::is_same_v<meta::drop<int_char_bool, size_constant<1>>, meta::list<char, bool>>);
+static_assert(std::is_same_v<meta::drop<int_char_bool, size_constant<40>>, meta::list<>>);
+static_assert(meta::foldl<meta_add, int_<0>, meta::drop<nums, size_constant<11>>>::value == 7085);
 
-static_assert(std::is_same_v<meta::take<int_char_bool, 0>, meta::list<>>);
-static_assert(std::is_same_v<meta::take<int_char_bool, 2>, meta::list<int, char>>);
-static_assert(std::is_same_v<meta::take<int_char_bool, 40>, int_char_bool>);
-static_assert(meta::foldl<meta_add, int_<0>, meta::take<nums, 11>>::value == 55);
+static_assert(std::is_same_v<meta::take<int_char_bool, size_constant<0>>, meta::list<>>);
+static_assert(std::is_same_v<meta::take<int_char_bool, size_constant<2>>, meta::list<int, char>>);
+static_assert(std::is_same_v<meta::take<int_char_bool, size_constant<40>>, int_char_bool>);
+static_assert(meta::foldl<meta_add, int_<0>, meta::take<nums, size_constant<11>>>::value == 55);
 
 using F = meta::list<meta::list<int, char>, meta::list<bool>>;
 using G = meta::list<meta::list<int, char, bool>, meta::list<>>;
-static_assert(std::is_same_v<meta::split_at<int_char_bool, 2>, F>);
-static_assert(std::is_same_v<meta::split_at<int_char_bool, 3>, G>);
+static_assert(std::is_same_v<meta::split_at<int_char_bool, size_constant<2>>, F>);
+static_assert(std::is_same_v<meta::split_at<int_char_bool, size_constant<3>>, G>);
 
 static_assert(std::is_same_v<meta::append<int_char_bool, int>, meta::list<int, char, bool, int>>);
 
-static_assert(std::is_same_v<meta::insert_at<int_char_bool, 2, int>, meta::list<int, char, int, bool>>);
-static_assert(std::is_same_v<meta::insert_at<int_char_bool, 0, int>, meta::list<int, int, char, bool>>);
+static_assert(std::is_same_v<meta::insert_at<int_char_bool, size_constant<2>, int>, meta::list<int, char, int, bool>>);
+static_assert(std::is_same_v<meta::insert_at<int_char_bool, size_constant<0>, int>, meta::list<int, int, char, bool>>);
 
 template <typename T>
 using is_bool = std::is_same<T, bool>;

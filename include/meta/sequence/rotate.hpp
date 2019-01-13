@@ -13,19 +13,19 @@ namespace meta
 {
     namespace details
     {
-        template <typename Sequence, std::size_t N>
+        template <typename Sequence, typename N>
         struct rotate;
 
-        template <typename ...Ts, std::size_t N>
+        template <typename ...Ts, typename N>
         struct rotate<list<Ts...>, N>
         {
             using type = typename details::rotate_helper<
-                details::choose_rotate_step(simplify_rotate_num(N, sizeof...(Ts)))
-            >::template f<simplify_rotate_num(N, sizeof...(Ts)), Ts...>;
+                details::choose_rotate_step(simplify_rotate_num(N::value, sizeof...(Ts)))
+            >::template f<simplify_rotate_num(N::value, sizeof...(Ts)), Ts...>;
         };
     }
 
-    template <typename Sequence, std::size_t N>
+    template <typename Sequence, typename N>
     using rotate = typename details::rotate<Sequence, N>::type;
 }
 

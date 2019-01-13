@@ -5,7 +5,7 @@
 #ifndef META_SEQUENCE_INSERT_AT_HPP
 #define META_SEQUENCE_INSERT_AT_HPP
 
-#include <cstddef>
+#include <meta/utils/integral_constants.hpp>
 #include <meta/sequence/take.hpp>
 #include <meta/sequence/join.hpp>
 #include <meta/sequence/cons.hpp>
@@ -14,7 +14,7 @@ namespace meta
 {
     namespace details
     {
-        template <std::size_t Index>
+        template <typename Index>
         struct insert_at
         {
             template <typename Sequence, typename T>
@@ -22,7 +22,7 @@ namespace meta
         };
 
         template <>
-        struct insert_at<0>
+        struct insert_at<size_constant<0>>
         {
             template <typename Sequence, typename T>
             using f = meta::cons<T, Sequence>;
@@ -30,7 +30,7 @@ namespace meta
 
     }
 
-    template <typename Sequence, std::size_t Index, typename T>
+    template <typename Sequence, typename Index, typename T>
     using insert_at = typename details::insert_at<Index>::template f<Sequence, T>;
 }
 

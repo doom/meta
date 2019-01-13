@@ -12,7 +12,7 @@
 
 namespace meta
 {
-    template <typename Sequence, std::size_t N>
+    template <typename Sequence, typename N>
     using split_at = meta::list<meta::take<Sequence, N>, meta::drop<Sequence, N>>;
 }
 

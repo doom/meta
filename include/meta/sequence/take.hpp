@@ -17,20 +17,20 @@ namespace meta
         template <bool>
         struct take
         {
-            template <typename Sequence, std::size_t N>
-            using f = meta::drop<meta::rotate<Sequence, N>, size<Sequence>::value - N>;
+            template <typename Sequence, typename N>
+            using f = meta::drop<meta::rotate<Sequence, N>, size_constant<size<Sequence>::value - N::value>>;
         };
 
         template <>
         struct take<false>
         {
-            template <typename Sequence, std::size_t>
+            template <typename Sequence, typename>
             using f = Sequence;
         };
     }
 
-    template <typename Sequence, std::size_t N>
-    using take = typename details::take<(size<Sequence>::value > N)>::template f<Sequence, N>;
+    template <typename Sequence, typename N>
+    using take = typename details::take<(size<Sequence>::value > N::value)>::template f<Sequence, N>;
 }
 
 #endif /* !META_SEQUENCE_TAKE_HPP */

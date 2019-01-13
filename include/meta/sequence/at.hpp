@@ -25,16 +25,16 @@ namespace meta
         {
         };
 
-        template <std::size_t I, typename List>
+        template <typename I, typename Sequence>
         struct at;
 
-        template <std::size_t I, typename ...Types>
+        template <typename I, typename ...Types>
         struct at<I, list<Types...>>
         {
-            static_assert(I < sizeof...(Types), "meta::at: index out of range");
+            static_assert(I::value < sizeof...(Types), "meta::at: index out of range");
 
             template <typename T>
-            static T get(indexed_element<I, T>);
+            static T get(indexed_element<I::value, T>);
 
             using index_type = indexed_list<std::make_index_sequence<sizeof...(Types)>, Types...>;
             using type = decltype(at::get(index_type{}));
@@ -44,7 +44,7 @@ namespace meta
     /**
      * Get the element at a given index from a sequence
      */
-    template <typename Sequence, std::size_t I>
+    template <typename Sequence, typename I>
     using at = typename details::at<I, Sequence>::type;
 }
 

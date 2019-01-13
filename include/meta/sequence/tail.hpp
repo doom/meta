@@ -5,12 +5,13 @@
 #ifndef META_SEQUENCE_TAIL_HPP
 #define META_SEQUENCE_TAIL_HPP
 
+#include <meta/utils/integral_constants.hpp>
 #include <meta/sequence/drop.hpp>
 
 namespace meta
 {
     template <typename Sequence>
-    using tail = drop<Sequence, 1>;
+    using tail = drop<Sequence, size_constant<1>>;
 }
 
 #endif /* !META_SEQUENCE_TAIL_HPP */
