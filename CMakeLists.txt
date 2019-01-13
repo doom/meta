@@ -36,10 +36,12 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/split_at.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/tail.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/take.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/unordered_map.hpp
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/detection/detection.hpp
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
         )
 
 add_library(meta INTERFACE)
@@ -51,6 +53,8 @@ target_include_directories(meta INTERFACE include)
 add_executable(meta-tests
         tests/tests-type_list.cpp
         tests/tests-detection.cpp
-        tests/tests-main.cpp)
+        tests/tests-type_map.cpp
+        tests/tests-main.cpp
+        )
 
 target_link_libraries(meta-tests meta)

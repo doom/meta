@@ -1,0 +1,16 @@
+/*
+** Created by doom on 13/01/19.
+*/
+
+#ifndef META_UTILS_PAIR_HPP
+#define META_UTILS_PAIR_HPP
+
+namespace meta
+{
+    template <typename T, typename U>
+    struct pair
+    {
+    };
+}
+
+#endif /* !META_UTILS_PAIR_HPP */

@@ -27,5 +27,6 @@
 #include <meta/sequence/split_at.hpp>
 #include <meta/sequence/tail.hpp>
 #include <meta/sequence/take.hpp>
+#include <meta/sequence/unordered_map.hpp>
 
 #endif /* !META_SEQUENCE_HPP */
