@@ -5,7 +5,6 @@
 #ifndef META_SEQUENCE_ROTATE_HPP
 #define META_SEQUENCE_ROTATE_HPP
 
-#include <cstddef>
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/details/rotate_helper.hpp>
 

@@ -5,8 +5,7 @@
 #ifndef META_SEQUENCE_SIZE_HPP
 #define META_SEQUENCE_SIZE_HPP
 
-#include <cstddef>
-#include <type_traits>
+#include <meta/utils/integral_constants.hpp>
 #include <meta/sequence/list.hpp>
 
 namespace meta
@@ -15,7 +14,7 @@ namespace meta
     struct size;
 
     template <typename ...Types>
-    struct size<list<Types...>> : std::integral_constant<std::size_t, sizeof...(Types)>
+    struct size<list<Types...>> : size_constant<sizeof...(Types)>
     {
     };
 }

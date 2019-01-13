@@ -5,7 +5,6 @@
 #ifndef META_SEQUENCE_SPLIT_AT_HPP
 #define META_SEQUENCE_SPLIT_AT_HPP
 
-#include <cstddef>
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/take.hpp>
 #include <meta/sequence/drop.hpp>

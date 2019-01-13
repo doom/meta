@@ -27,7 +27,6 @@ namespace meta
             template <typename Sequence, typename T>
             using f = meta::cons<T, Sequence>;
         };
-
     }
 
     template <typename Sequence, typename Index, typename T>
