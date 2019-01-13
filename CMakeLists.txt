@@ -38,6 +38,8 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/take.hpp
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/detection/detection.hpp
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
         )
 
 add_library(meta INTERFACE)
