@@ -43,6 +43,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/overload_set.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/priority_tag.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/recursive_adaptor.hpp
         )
 
@@ -59,6 +60,7 @@ add_executable(meta-tests
         tests/tests-detection.cpp
         tests/tests-type_map.cpp
         tests/tests-overload_set.cpp
+        tests/tests-priority_tag.cpp
         tests/tests-recursive_adaptor.cpp
         )
 
