@@ -14,8 +14,8 @@ namespace meta
     {
         using Funcs::operator()...;
 
-        template <typename ...FuncsU>
-        constexpr overload_set(FuncsU &&...funcs) : Funcs(std::forward<FuncsU>(funcs))...
+        template <typename ...FuncsU, typename = std::enable_if_t<(std::is_constructible_v<Funcs, FuncsU> && ...)>>
+        constexpr explicit overload_set(FuncsU &&...funcs) : Funcs(std::forward<FuncsU>(funcs))...
         {
         }
     };

@@ -43,6 +43,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/overload_set.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/recursive_adaptor.hpp
         )
 
 add_library(meta INTERFACE)
@@ -58,6 +59,7 @@ add_executable(meta-tests
         tests/tests-detection.cpp
         tests/tests-type_map.cpp
         tests/tests-overload_set.cpp
+        tests/tests-recursive_adaptor.cpp
         )
 
 target_link_libraries(meta-tests meta GTest::GTest GTest::Main)
