@@ -6,6 +6,7 @@
 #define META_SEQUENCE_APPEND_HPP
 
 #include <meta/sequence/list.hpp>
+#include <meta/sequence/unordered_map.hpp>
 
 namespace meta
 {
@@ -18,6 +19,12 @@ namespace meta
         struct append<list<Types...>, T>
         {
             using type = list<Types..., T>;
+        };
+
+        template <typename ...Types, typename T>
+        struct append<unordered_map<Types...>, T>
+        {
+            using type = unordered_map<Types..., T>;
         };
     }
 

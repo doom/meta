@@ -17,6 +17,11 @@ namespace meta
     struct size<list<Types...>> : size_constant<sizeof...(Types)>
     {
     };
+
+    template <typename ...Types>
+    struct size<unordered_map<Types...>> : size_constant<sizeof...(Types)>
+    {
+    };
 }
 
 #endif /* !META_SEQUENCE_SIZE_HPP */

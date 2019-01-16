@@ -15,3 +15,24 @@ static_assert(std::is_same_v<meta::at<signed_to_unsigned, signed char>, unsigned
 static_assert(std::is_same_v<meta::at<signed_to_unsigned, short>, unsigned short>);
 static_assert(std::is_same_v<meta::at<signed_to_unsigned, int>, unsigned int>);
 static_assert(std::is_same_v<meta::at<signed_to_unsigned, long>, unsigned long>);
+
+using smaller_to_bigger = meta::unordered_map<
+    meta::pair<char, short>,
+    meta::pair<short, int>,
+    meta::pair<int, long>
+>;
+
+using smaller_to_bigger2 = meta::append<smaller_to_bigger, meta::pair<long, long long>>;
+
+static_assert(std::is_same_v<
+    smaller_to_bigger2,
+    meta::unordered_map<
+        meta::pair<char, short>,
+        meta::pair<short, int>,
+        meta::pair<int, long>,
+        meta::pair<long, long long>
+    >
+>);
+
+static_assert(meta::size<signed_to_unsigned>::value == 4);
+static_assert(meta::size<smaller_to_bigger>::value == 3);
