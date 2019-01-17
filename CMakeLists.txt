@@ -45,6 +45,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/priority_tag.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/recursive_adaptor.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/tuple_for_each.hpp
         )
 
 add_library(meta INTERFACE)
@@ -62,6 +63,7 @@ add_executable(meta-tests
         tests/tests-overload_set.cpp
         tests/tests-priority_tag.cpp
         tests/tests-recursive_adaptor.cpp
+        tests/tests-tuple_for_each.cpp
         )
 
 target_link_libraries(meta-tests meta GTest::GTest GTest::Main)
