@@ -10,6 +10,8 @@ namespace meta
     template <typename T, typename U>
     struct pair
     {
+        using first_type = T;
+        using second_type = U;
     };
 }
 
