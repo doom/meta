@@ -41,6 +41,7 @@ set(META_SOURCES
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/detection/detection.hpp
 
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/enum_bitwise_ops.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/overload_set.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
@@ -60,6 +61,7 @@ find_package(GTest REQUIRED)
 add_executable(meta-tests
         tests/tests-type_list.cpp
         tests/tests-detection.cpp
+        tests/tests-enum_bitwise_ops.cpp
         tests/tests-type_map.cpp
         tests/tests-overload_set.cpp
         tests/tests-priority_tag.cpp
