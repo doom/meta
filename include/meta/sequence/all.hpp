@@ -6,21 +6,27 @@
 #define META_SEQUENCE_ALL_HPP
 
 #include <meta/sequence/list.hpp>
+#include <meta/sequence/unordered_map.hpp>
 
 namespace meta
 {
     namespace details
     {
-        template <template <typename ...> typename MetaF, typename Sequence>
+        template <template <typename> typename MetaF, typename Sequence>
         struct all;
 
-        template <template <typename ...> typename MetaF, typename ...Types>
+        template <template <typename> typename MetaF, typename ...Types>
         struct all<MetaF, list<Types...>> : std::bool_constant<((MetaF<Types>::value) && ...)>
+        {
+        };
+
+        template <template <typename> typename MetaF, typename ...Types>
+        struct all<MetaF, unordered_map<Types...>> : std::bool_constant<((MetaF<Types>::value) && ...)>
         {
         };
     }
 
-    template <template <typename ...> typename MetaF, typename Sequence>
+    template <template <typename> typename MetaF, typename Sequence>
     using all = details::all<MetaF, Sequence>;
 }
 

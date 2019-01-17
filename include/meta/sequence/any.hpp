@@ -11,16 +11,21 @@ namespace meta
 {
     namespace details
     {
-        template <template <typename ...> typename MetaF, typename Sequence>
+        template <template <typename> typename MetaF, typename Sequence>
         struct any;
 
-        template <template <typename ...> typename MetaF, typename ...Types>
+        template <template <typename> typename MetaF, typename ...Types>
         struct any<MetaF, list<Types...>> : std::bool_constant<((MetaF<Types>::value) || ...)>
+        {
+        };
+
+        template <template <typename> typename MetaF, typename ...Types>
+        struct any<MetaF, unordered_map<Types...>> : std::bool_constant<((MetaF<Types>::value) || ...)>
         {
         };
     }
 
-    template <template <typename ...> typename MetaF, typename Sequence>
+    template <template <typename> typename MetaF, typename Sequence>
     using any = details::any<MetaF, Sequence>;
 }
 

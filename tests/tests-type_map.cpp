@@ -51,3 +51,8 @@ static_assert(std::is_same_v<
         meta::pair<short, int>
     >
 >);
+
+static_assert(meta::all<key_smaller_than_int, smols>::value);
+static_assert(meta::any<key_smaller_than_int, smols>::value);
+static_assert(not meta::all<key_smaller_than_int, smaller_to_bigger2>::value);
+static_assert(meta::any<key_smaller_than_int, smaller_to_bigger2>::value);
