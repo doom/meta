@@ -7,8 +7,10 @@
 
 #include <type_traits>
 #include <meta/sequence/list.hpp>
+#include <meta/sequence/unordered_map.hpp>
 #include <meta/sequence/map.hpp>
 #include <meta/sequence/flatten.hpp>
+#include <meta/sequence/from_list.hpp>
 
 namespace meta
 {
@@ -25,6 +27,12 @@ namespace meta
         struct filter
         {
             using type = meta::flatten<meta::map<list_or_empty<MetaF>::template f, Sequence>>;
+        };
+
+        template <template <typename> typename MetaF, typename ...Types>
+        struct filter<MetaF, unordered_map<Types...>>
+        {
+            using type = meta::from_list<meta::unordered_map, typename filter<MetaF, meta::list<Types...>>::type>;
         };
     }
 

@@ -36,3 +36,18 @@ static_assert(std::is_same_v<
 
 static_assert(meta::size<signed_to_unsigned>::value == 4);
 static_assert(meta::size<smaller_to_bigger>::value == 3);
+
+template <typename T>
+using smaller_than_int = std::bool_constant<sizeof(T) < sizeof(int)>;
+
+template <typename KeyValue>
+using key_smaller_than_int = smaller_than_int<typename KeyValue::first_type>;
+
+using smols = meta::filter<key_smaller_than_int, smaller_to_bigger2>;
+static_assert(std::is_same_v<
+    smols,
+    meta::unordered_map<
+        meta::pair<char, short>,
+        meta::pair<short, int>
+    >
+>);
