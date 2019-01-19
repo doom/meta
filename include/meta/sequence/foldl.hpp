@@ -6,6 +6,7 @@
 #define META_SEQUENCE_FOLDL_HPP
 
 #include <meta/sequence/list.hpp>
+#include <meta/sequence/unordered_map.hpp>
 #include <meta/sequence/details/foldl_helper.hpp>
 
 namespace meta
@@ -17,6 +18,14 @@ namespace meta
 
         template <template <typename ...> typename MetaF, typename Initial, typename ...Types>
         struct foldl<MetaF, Initial, list<Types...>>
+        {
+            using type = typename foldl_helper<choose_foldl_step(sizeof...(Types))>::template f<
+                MetaF, Initial, Types...
+            >;
+        };
+
+        template <template <typename ...> typename MetaF, typename Initial, typename ...Types>
+        struct foldl<MetaF, Initial, unordered_map<Types...>>
         {
             using type = typename foldl_helper<choose_foldl_step(sizeof...(Types))>::template f<
                 MetaF, Initial, Types...

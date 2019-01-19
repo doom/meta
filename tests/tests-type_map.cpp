@@ -121,3 +121,13 @@ static_assert(std::is_same_v<numbers_double, meta::unordered_map<
     meta::pair<int_<18>, int_<36>>,
     meta::pair<int_<19>, int_<38>>
 >>);
+
+template <typename A, typename B>
+using add_ints = int_<A::value + B::value>;
+
+template <typename Accumulator, typename KeyValue>
+using add_keys = add_ints<Accumulator, typename KeyValue::first_type>;
+
+using sum_of_keys = meta::foldl<add_keys, int_<0>, numbers_double>;
+
+static_assert(sum_of_keys::value == 190);
