@@ -65,6 +65,7 @@ if (META_BUILD_TESTS)
             tests/tests-type_list.cpp
             tests/tests-detection.cpp
             tests/tests-enum_bitwise_ops.cpp
+            tests/tests-integral_constants.cpp
             tests/tests-type_map.cpp
             tests/tests-overload_set.cpp
             tests/tests-priority_tag.cpp
