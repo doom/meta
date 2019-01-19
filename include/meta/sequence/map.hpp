@@ -6,6 +6,7 @@
 #define META_SEQUENCE_MAP_HPP
 
 #include <meta/sequence/list.hpp>
+#include <meta/sequence/unordered_map.hpp>
 
 namespace meta
 {
@@ -18,6 +19,12 @@ namespace meta
         struct map<MetaF, list<Types...>>
         {
             using type = list<MetaF<Types>...>;
+        };
+
+        template <template <typename> typename MetaF, typename ...Types>
+        struct map<MetaF, unordered_map<Types...>>
+        {
+            using type = unordered_map<MetaF<Types>...>;
         };
     }
 
