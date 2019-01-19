@@ -56,17 +56,21 @@ target_sources(meta INTERFACE ${META_SOURCES})
 
 target_include_directories(meta INTERFACE include)
 
-find_package(GTest REQUIRED)
+option(META_BUILD_TESTS "Build tests of the meta library" OFF)
 
-add_executable(meta-tests
-        tests/tests-type_list.cpp
-        tests/tests-detection.cpp
-        tests/tests-enum_bitwise_ops.cpp
-        tests/tests-type_map.cpp
-        tests/tests-overload_set.cpp
-        tests/tests-priority_tag.cpp
-        tests/tests-recursive_adaptor.cpp
-        tests/tests-tuple_for_each.cpp
-        )
+if (META_BUILD_TESTS)
+    find_package(GTest REQUIRED)
 
-target_link_libraries(meta-tests meta GTest::GTest GTest::Main)
+    add_executable(meta-tests
+            tests/tests-type_list.cpp
+            tests/tests-detection.cpp
+            tests/tests-enum_bitwise_ops.cpp
+            tests/tests-type_map.cpp
+            tests/tests-overload_set.cpp
+            tests/tests-priority_tag.cpp
+            tests/tests-recursive_adaptor.cpp
+            tests/tests-tuple_for_each.cpp
+            )
+
+    target_link_libraries(meta-tests meta GTest::GTest GTest::Main)
+endif ()
