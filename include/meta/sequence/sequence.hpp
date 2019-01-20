@@ -12,6 +12,7 @@
 #include <meta/sequence/concat.hpp>
 #include <meta/sequence/cons.hpp>
 #include <meta/sequence/drop.hpp>
+#include <meta/sequence/drop_at.hpp>
 #include <meta/sequence/filter.hpp>
 #include <meta/sequence/foldl.hpp>
 #include <meta/sequence/flatten.hpp>

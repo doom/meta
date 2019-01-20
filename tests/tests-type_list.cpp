@@ -145,3 +145,6 @@ static_assert(meta::index<is_double, regular_types>::value == 3);
 static_assert(meta::index<is_62, nums>::value == 62);
 static_assert(meta::index<is_118, nums>::value == 118);
 static_assert(meta::index<is_int, meta::list<int>>::value == 0);
+
+static_assert(std::is_same_v<meta::drop_at<int_char_bool, int_<0>>, meta::list<char, bool>>);
+static_assert(std::is_same_v<meta::drop_at<int_char_bool, int_<1>>, meta::list<int, bool>>);

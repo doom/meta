@@ -20,6 +20,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/concat.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/cons.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/drop.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/drop_at.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/filter.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/flatten.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/foldl.hpp
