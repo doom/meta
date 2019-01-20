@@ -43,6 +43,7 @@ set(META_SOURCES
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/enum_bitwise_ops.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/meta_function_utils.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/overload_set.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/priority_tag.hpp
@@ -66,6 +67,7 @@ if (META_BUILD_TESTS)
             tests/tests-detection.cpp
             tests/tests-enum_bitwise_ops.cpp
             tests/tests-integral_constants.cpp
+            tests/tests-meta_function_utils.cpp
             tests/tests-type_map.cpp
             tests/tests-overload_set.cpp
             tests/tests-priority_tag.cpp
