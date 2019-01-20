@@ -47,6 +47,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/overload_set.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/priority_tag.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/rebind.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/recursive_adaptor.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/tuple_for_each.hpp
         )
@@ -71,6 +72,7 @@ if (META_BUILD_TESTS)
             tests/tests-type_map.cpp
             tests/tests-overload_set.cpp
             tests/tests-priority_tag.cpp
+            tests/tests-rebind.cpp
             tests/tests-recursive_adaptor.cpp
             tests/tests-tuple_for_each.cpp
             )
