@@ -3,8 +3,11 @@
 */
 
 #include <gtest/gtest.h>
-#include <meta/utils/meta_function_utils.hpp>
+#include <type_traits>
+#include <meta/utils/meta_functions.hpp>
 #include <meta/utils/integral_constants.hpp>
+
+static_assert(std::is_same_v<meta::identity<int>, int>);
 
 template <typename T>
 using div_by_two = meta::divides<T, meta::size_constant<2>>;

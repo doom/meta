@@ -2,11 +2,14 @@
 ** Created by doom on 19/01/19.
 */
 
-#ifndef META_UTILS_META_FUNCTION_UTILS_HPP
-#define META_UTILS_META_FUNCTION_UTILS_HPP
+#ifndef META_UTILS_META_FUNCTIONS_HPP
+#define META_UTILS_META_FUNCTIONS_HPP
 
 namespace meta
 {
+    template <typename T>
+    using identity = T;
+
     namespace details
     {
         template <template <typename> typename MetaF1, template <typename> typename MetaF2>
@@ -21,4 +24,4 @@ namespace meta
     using compose = details::compose<MetaF1, MetaF2>;
 }
 
-#endif /* !META_UTILS_META_FUNCTION_UTILS_HPP */
+#endif /* !META_UTILS_META_FUNCTIONS_HPP */

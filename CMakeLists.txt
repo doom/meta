@@ -44,7 +44,7 @@ set(META_SOURCES
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/enum_bitwise_ops.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/meta_function_utils.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/meta_functions.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/overload_set.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/pair.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/priority_tag.hpp
