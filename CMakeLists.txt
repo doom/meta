@@ -32,6 +32,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/last.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/list.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/map.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/none.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/rotate.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/sequence.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/size.hpp
@@ -69,7 +70,7 @@ if (META_BUILD_TESTS)
             tests/tests-detection.cpp
             tests/tests-enum_bitwise_ops.cpp
             tests/tests-integral_constants.cpp
-            tests/tests-meta_function_utils.cpp
+            tests/tests-meta_functions.cpp
             tests/tests-type_map.cpp
             tests/tests-overload_set.cpp
             tests/tests-priority_tag.cpp

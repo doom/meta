@@ -73,6 +73,10 @@ static_assert(meta::any<std::is_pointer, pointer_types>::value);
 static_assert(not meta::any<std::is_pointer, regular_types>::value);
 static_assert(meta::any<std::is_pointer, E>::value);
 
+static_assert(not meta::none<std::is_pointer, pointer_types>::value);
+static_assert(meta::none<std::is_pointer, regular_types>::value);
+static_assert(not meta::none<std::is_pointer, E>::value);
+
 template <int i>
 using int_ = std::integral_constant<int, i>;
 
