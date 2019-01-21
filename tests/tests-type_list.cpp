@@ -152,3 +152,7 @@ static_assert(meta::index<is_int, meta::list<int>>::value == 0);
 
 static_assert(std::is_same_v<meta::drop_at<int_char_bool, int_<0>>, meta::list<char, bool>>);
 static_assert(std::is_same_v<meta::drop_at<int_char_bool, int_<1>>, meta::list<int, bool>>);
+
+using H = meta::repeat<int, int_<5>>;
+static_assert(std::is_same_v<H, meta::list<int, int, int, int, int>>);
+static_assert(std::is_same_v<meta::repeat<int, int_<0>>, meta::list<>>);

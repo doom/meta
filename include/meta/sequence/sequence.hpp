@@ -24,6 +24,7 @@
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/map.hpp>
 #include <meta/sequence/none.hpp>
+#include <meta/sequence/repeat.hpp>
 #include <meta/sequence/rotate.hpp>
 #include <meta/sequence/size.hpp>
 #include <meta/sequence/split_at.hpp>
