@@ -159,3 +159,10 @@ static_assert(std::is_same_v<meta::repeat<int, int_<0>>, meta::list<>>);
 
 using I = meta::replace<is_int, bool, H>;
 static_assert(std::is_same_v<I, meta::list<bool, bool, bool, bool, bool>>);
+
+template <typename A, typename B>
+using int_less = std::bool_constant<A::value<B::value>;
+
+using J = meta::list<int_<3>, int_<2>, int_<1>, int_<5>, int_<1>, int_<3>>;
+static_assert(std::is_same_v<meta::minimum<int_less, nums>, int_<0>>);
+static_assert(std::is_same_v<meta::minimum<int_less, J>, int_<1>>);

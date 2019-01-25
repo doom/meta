@@ -32,6 +32,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/last.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/list.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/map.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/minimum.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/none.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/repeat.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/replace.hpp

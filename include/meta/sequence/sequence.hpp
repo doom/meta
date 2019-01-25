@@ -23,6 +23,7 @@
 #include <meta/sequence/last.hpp>
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/map.hpp>
+#include <meta/sequence/minimum.hpp>
 #include <meta/sequence/none.hpp>
 #include <meta/sequence/repeat.hpp>
 #include <meta/sequence/replace.hpp>
