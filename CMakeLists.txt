@@ -34,6 +34,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/map.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/none.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/repeat.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/replace.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/rotate.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/sequence.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/size.hpp

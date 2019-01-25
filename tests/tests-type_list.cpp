@@ -156,3 +156,6 @@ static_assert(std::is_same_v<meta::drop_at<int_char_bool, int_<1>>, meta::list<i
 using H = meta::repeat<int, int_<5>>;
 static_assert(std::is_same_v<H, meta::list<int, int, int, int, int>>);
 static_assert(std::is_same_v<meta::repeat<int, int_<0>>, meta::list<>>);
+
+using I = meta::replace<is_int, bool, H>;
+static_assert(std::is_same_v<I, meta::list<bool, bool, bool, bool, bool>>);
