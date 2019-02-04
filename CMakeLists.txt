@@ -57,18 +57,19 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/tuple_for_each.hpp
         )
 
-add_library(meta INTERFACE)
+add_library(doom_meta INTERFACE)
+add_library(doom::meta ALIAS doom_meta)
 
-target_sources(meta INTERFACE ${META_SOURCES})
+target_sources(doom_meta INTERFACE ${META_SOURCES})
 
-target_include_directories(meta INTERFACE include)
+target_include_directories(doom_meta INTERFACE include)
 
 option(META_BUILD_TESTS "Build tests of the meta library" OFF)
 
 if (META_BUILD_TESTS)
     find_package(GTest REQUIRED)
 
-    add_executable(meta-tests
+    add_executable(doom_meta-tests
             tests/tests-type_list.cpp
             tests/tests-detection.cpp
             tests/tests-enum_bitwise_ops.cpp
@@ -82,5 +83,5 @@ if (META_BUILD_TESTS)
             tests/tests-tuple_for_each.cpp
             )
 
-    target_link_libraries(meta-tests meta GTest::GTest GTest::Main)
+    target_link_libraries(doom_meta-tests doom::meta GTest::GTest GTest::Main)
 endif ()
