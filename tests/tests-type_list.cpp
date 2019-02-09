@@ -166,3 +166,9 @@ using int_less = std::bool_constant<A::value<B::value>;
 using J = meta::list<int_<3>, int_<2>, int_<1>, int_<5>, int_<1>, int_<3>>;
 static_assert(std::is_same_v<meta::minimum<int_less, nums>, int_<0>>);
 static_assert(std::is_same_v<meta::minimum<int_less, J>, int_<1>>);
+
+using K = meta::zip<meta::list<int_<0>, int_<2>, int_<4>>, meta::list<int_<1>, int_<3>, int_<5>>>;
+static_assert(std::is_same_v<
+    K,
+    meta::list<meta::pair<int_<0>, int_<1>>, meta::pair<int_<2>, int_<3>>, meta::pair<int_<4>, int_<5>>>
+>);
