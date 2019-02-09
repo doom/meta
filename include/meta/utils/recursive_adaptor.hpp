@@ -10,6 +10,10 @@
 
 namespace meta
 {
+    /**
+     * Adaptor to allow recursion for function objects that don't support it natively (e.g. lambdas)
+     * It wraps a function object, overloads the call operator, and passes itself as first argument
+     */
     template <typename Func>
     class recursive_adaptor : private Func
     {

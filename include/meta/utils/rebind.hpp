@@ -19,6 +19,9 @@ namespace meta
         };
     }
 
+    /**
+     * Rebind the arguments passed to a template to another template
+     */
     template <typename T, template <typename ...> typename To>
     using rebind = typename details::rebind<T, To>::type;
 }

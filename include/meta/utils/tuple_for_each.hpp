@@ -19,6 +19,7 @@ namespace meta
         }
     }
 
+    /** Apply a function (or function object) to each element of a tuple */
     template <typename Tuple, typename Func>
     void tuple_for_each(Tuple &&t, Func &&func)
     {

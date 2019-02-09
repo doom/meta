@@ -10,6 +10,8 @@
 
 namespace meta
 {
+    /** std::integral_constant-like types and metafunctions to operate on them */
+
     template <std::size_t Value>
     using size_constant = std::integral_constant<std::size_t, Value>;
 

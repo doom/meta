@@ -9,6 +9,9 @@
 
 namespace meta
 {
+    /**
+     * Helper template to form an overload set from functions or function objects
+     */
     template <typename ...Funcs>
     struct overload_set : private Funcs ...
     {

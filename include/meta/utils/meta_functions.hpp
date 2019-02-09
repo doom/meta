@@ -43,6 +43,9 @@ namespace meta
         };
     }
 
+    /** Compose two meta functions
+     * The rightmost is called first
+     */
     template <template <typename> typename MetaF1, template <typename> typename MetaF2>
     using compose = details::compose<MetaF1, MetaF2>;
 }
