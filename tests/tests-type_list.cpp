@@ -172,3 +172,9 @@ static_assert(std::is_same_v<
     K,
     meta::list<meta::pair<int_<0>, int_<1>>, meta::pair<int_<2>, int_<3>>, meta::pair<int_<4>, int_<5>>>
 >);
+
+using L = meta::unzip<K>;
+static_assert(std::is_same_v<
+    L,
+    meta::pair<meta::list<int_<0>, int_<2>, int_<4>>, meta::list<int_<1>, int_<3>, int_<5>>>
+>);

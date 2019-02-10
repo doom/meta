@@ -33,6 +33,7 @@
 #include <meta/sequence/tail.hpp>
 #include <meta/sequence/take.hpp>
 #include <meta/sequence/unordered_map.hpp>
+#include <meta/sequence/unzip.hpp>
 #include <meta/sequence/zip.hpp>
 
 #endif /* !META_SEQUENCE_HPP */

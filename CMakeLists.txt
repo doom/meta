@@ -43,6 +43,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/tail.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/take.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/unordered_map.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/unzip.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/zip.hpp
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/detection/detection.hpp
