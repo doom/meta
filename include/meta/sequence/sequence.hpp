@@ -17,8 +17,9 @@
 #include <meta/sequence/foldl.hpp>
 #include <meta/sequence/flatten.hpp>
 #include <meta/sequence/head.hpp>
-#include <meta/sequence/insert_at.hpp>
 #include <meta/sequence/index.hpp>
+#include <meta/sequence/init.hpp>
+#include <meta/sequence/insert_at.hpp>
 #include <meta/sequence/join.hpp>
 #include <meta/sequence/last.hpp>
 #include <meta/sequence/list.hpp>

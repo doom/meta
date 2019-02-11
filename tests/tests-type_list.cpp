@@ -181,3 +181,6 @@ static_assert(std::is_same_v<
 
 using M = meta::replicate<int_<5>, int>;
 static_assert(std::is_same_v<M, meta::list<int, int, int, int, int>>);
+
+static_assert(std::is_same_v<meta::init<int_char_bool>, meta::list<int, char>>);
+static_assert(std::is_same_v<meta::init<meta::list<int>>, meta::list<>>);

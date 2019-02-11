@@ -27,6 +27,7 @@ set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/from_list.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/head.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/index.hpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/init.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/insert_at.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/join.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/last.hpp
