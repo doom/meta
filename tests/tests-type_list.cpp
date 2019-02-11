@@ -178,3 +178,6 @@ static_assert(std::is_same_v<
     L,
     meta::pair<meta::list<int_<0>, int_<2>, int_<4>>, meta::list<int_<1>, int_<3>, int_<5>>>
 >);
+
+using M = meta::replicate<int_<5>, int>;
+static_assert(std::is_same_v<M, meta::list<int, int, int, int, int>>);
