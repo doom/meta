@@ -50,6 +50,7 @@ set(META_SOURCES
 
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/detection/detection.hpp
 
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/allow_copy_move_operations.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/enum_bitwise_ops.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/integral_constants.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/utils/meta_functions.hpp
