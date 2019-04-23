@@ -2,10 +2,6 @@ cmake_minimum_required(VERSION 3.9)
 
 project(meta)
 
-set(CMAKE_CXX_STANDARD 17)
-
-set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-
 set(META_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/drop_helper.hpp
         ${CMAKE_CURRENT_SOURCE_DIR}/include/meta/sequence/details/flatten_helper.hpp
@@ -72,6 +68,9 @@ target_include_directories(doom_meta INTERFACE include)
 option(META_BUILD_TESTS "Build tests of the meta library" OFF)
 
 if (META_BUILD_TESTS)
+    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+
     find_package(GTest REQUIRED)
 
     add_executable(doom_meta-tests
