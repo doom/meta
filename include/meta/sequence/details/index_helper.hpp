@@ -7,7 +7,7 @@
 
 #include <cstddef>
 
-namespace meta
+namespace doom::meta
 {
     template <typename ...Types>
     struct list;

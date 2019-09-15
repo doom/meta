@@ -8,7 +8,7 @@
 #include <cstddef>
 #include <type_traits>
 
-namespace meta
+namespace doom::meta
 {
     /** std::integral_constant-like types and metafunctions to operate on them */
 

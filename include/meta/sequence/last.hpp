@@ -10,7 +10,7 @@
 #include <meta/sequence/at.hpp>
 #include <meta/sequence/size.hpp>
 
-namespace meta
+namespace doom::meta
 {
     template <typename Sequence>
     using last = at<Sequence, size_constant<size<Sequence>::value - 1>>;

@@ -8,7 +8,7 @@
 #include <meta/utils/integral_constants.hpp>
 #include <meta/sequence/list.hpp>
 
-namespace meta
+namespace doom::meta
 {
     template <typename Sequence>
     struct size;

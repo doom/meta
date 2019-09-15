@@ -5,7 +5,7 @@
 #ifndef META_UTILS_REBIND_HPP
 #define META_UTILS_REBIND_HPP
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

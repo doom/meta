@@ -8,7 +8,7 @@
 #include <meta/sequence/map.hpp>
 #include <meta/utils/meta_functions.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

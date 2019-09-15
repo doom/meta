@@ -8,7 +8,7 @@
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/details/index_helper.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

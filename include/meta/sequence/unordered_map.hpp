@@ -7,7 +7,7 @@
 
 #include <meta/utils/pair.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

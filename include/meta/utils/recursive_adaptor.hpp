@@ -8,7 +8,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace meta
+namespace doom::meta
 {
     /**
      * Adaptor to allow recursion for function objects that don't support it natively (e.g. lambdas)

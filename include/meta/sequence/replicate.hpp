@@ -8,7 +8,7 @@
 #include <utility>
 #include <meta/sequence/list.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

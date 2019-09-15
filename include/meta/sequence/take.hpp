@@ -10,7 +10,7 @@
 #include <meta/sequence/rotate.hpp>
 #include <meta/sequence/size.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

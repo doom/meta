@@ -9,7 +9,7 @@
 #include <meta/sequence/take.hpp>
 #include <meta/sequence/drop.hpp>
 
-namespace meta
+namespace doom::meta
 {
     template <typename Sequence, typename N>
     using split_at = meta::list<meta::take<Sequence, N>, meta::drop<Sequence, N>>;

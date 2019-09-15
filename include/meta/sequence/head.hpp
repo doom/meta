@@ -9,7 +9,7 @@
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/at.hpp>
 
-namespace meta
+namespace doom::meta
 {
     template <typename Sequence>
     using head = at<Sequence, size_constant<0>>;

@@ -10,7 +10,7 @@
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/unordered_map.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

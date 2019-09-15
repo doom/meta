@@ -65,7 +65,7 @@ target_sources(doom_meta INTERFACE ${META_SOURCES})
 
 target_include_directories(doom_meta INTERFACE include)
 
-option(META_BUILD_TESTS "Build tests of the meta library" OFF)
+option(META_BUILD_TESTS "Build tests of the meta library" ON)
 
 if (META_BUILD_TESTS)
     set(CMAKE_CXX_STANDARD 17)

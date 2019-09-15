@@ -7,7 +7,7 @@
 
 #include <cstddef>
 
-namespace meta::details
+namespace doom::meta::details
 {
     /**
      * Get the exponent needed to obtain a power of two greater than the given number

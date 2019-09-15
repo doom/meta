@@ -19,7 +19,7 @@ namespace
     };
 }
 
-static_assert(meta::is_detected_v<member_type_test_detector, with_test_member_type>);
-static_assert(!meta::is_detected_v<member_type_test_detector, without_test_member_type>);
-static_assert(std::is_same_v<meta::type_unless_detected_t<void, member_type_test_detector, with_test_member_type>, int>);
-static_assert(std::is_same_v<meta::type_unless_detected_t<void, member_type_test_detector, without_test_member_type>, void>);
+static_assert(doom::meta::is_detected_v<member_type_test_detector, with_test_member_type>);
+static_assert(!doom::meta::is_detected_v<member_type_test_detector, without_test_member_type>);
+static_assert(std::is_same_v<doom::meta::type_unless_detected_t<void, member_type_test_detector, with_test_member_type>, int>);
+static_assert(std::is_same_v<doom::meta::type_unless_detected_t<void, member_type_test_detector, without_test_member_type>, void>);

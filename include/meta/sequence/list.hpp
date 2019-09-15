@@ -7,7 +7,7 @@
 
 #include <type_traits>
 
-namespace meta
+namespace doom::meta
 {
     template <typename ...Types>
     struct list
