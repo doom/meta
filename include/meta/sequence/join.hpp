@@ -8,7 +8,7 @@
 #include <meta/sequence/list.hpp>
 #include <meta/sequence/flatten.hpp>
 
-namespace meta
+namespace doom::meta
 {
     /**
      * Join multiple sequences

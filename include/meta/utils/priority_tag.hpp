@@ -7,7 +7,7 @@
 
 #include <cstddef>
 
-namespace meta
+namespace doom::meta
 {
     template <std::size_t I>
     struct priority_tag : priority_tag<I - 1>

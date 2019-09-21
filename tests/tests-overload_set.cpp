@@ -7,7 +7,7 @@
 
 TEST(utils, overload_set)
 {
-    constexpr auto set1 = meta::make_overload_set([](const int &i) {
+    constexpr auto set1 = doom::meta::make_overload_set([](const int &i) {
         ASSERT_EQ(i, 1);
     }, [](const double &d) {
         ASSERT_EQ(d, 2.3);
@@ -15,7 +15,7 @@ TEST(utils, overload_set)
     set1(1);
     set1(2.3);
 
-    constexpr auto set2 = meta::make_overload_set([](int i) {
+    constexpr auto set2 = doom::meta::make_overload_set([](int i) {
         return i;
     }, [](auto &&) {
         return 0;

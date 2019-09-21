@@ -9,7 +9,7 @@
 #include <meta/sequence/unordered_map.hpp>
 #include <meta/sequence/details/foldl_helper.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

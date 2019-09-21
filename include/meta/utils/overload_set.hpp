@@ -7,7 +7,7 @@
 
 #include <utility>
 
-namespace meta
+namespace doom::meta
 {
     /**
      * Helper template to form an overload set from functions or function objects

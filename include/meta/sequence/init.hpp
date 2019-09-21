@@ -9,7 +9,7 @@
 #include <meta/sequence/size.hpp>
 #include <meta/utils/integral_constants.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

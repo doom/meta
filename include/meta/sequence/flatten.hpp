@@ -9,7 +9,7 @@
 #include <meta/sequence/details/flatten_helper.hpp>
 #include <meta/sequence/list.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

@@ -5,7 +5,7 @@
 #ifndef META_UTILS_ALLOW_COPY_MOVE_OPERATIONS_HPP
 #define META_UTILS_ALLOW_COPY_MOVE_OPERATIONS_HPP
 
-namespace meta
+namespace doom::meta
 {
     template <typename T, bool>
     class allow_move_construction_if : public T

@@ -8,7 +8,7 @@
 #include <meta/utils/integral_constants.hpp>
 #include <meta/sequence/drop.hpp>
 
-namespace meta
+namespace doom::meta
 {
     template <typename Sequence>
     using tail = drop<Sequence, size_constant<1>>;

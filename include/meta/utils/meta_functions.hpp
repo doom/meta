@@ -5,7 +5,7 @@
 #ifndef META_UTILS_META_FUNCTIONS_HPP
 #define META_UTILS_META_FUNCTIONS_HPP
 
-namespace meta
+namespace doom::meta
 {
     template <typename T>
     using identity = T;

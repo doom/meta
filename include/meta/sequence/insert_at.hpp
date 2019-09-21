@@ -10,7 +10,7 @@
 #include <meta/sequence/join.hpp>
 #include <meta/sequence/cons.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

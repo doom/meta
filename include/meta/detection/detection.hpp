@@ -7,7 +7,7 @@
 
 #include <type_traits>
 
-namespace meta
+namespace doom::meta
 {
     template <typename, template <typename ...> typename MetaF, typename ...Args>
     struct is_detected : std::false_type

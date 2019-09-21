@@ -8,7 +8,7 @@
 
 TEST(utils, recursive_adaptor)
 {
-    constexpr auto fact = meta::recursive_adaptor([](auto &&self, int n) constexpr -> int {
+    constexpr auto fact = doom::meta::recursive_adaptor([](auto &&self, int n) constexpr -> int {
         if (n <= 1)
             return 1;
         return n * self(n - 1);
@@ -16,7 +16,7 @@ TEST(utils, recursive_adaptor)
     static_assert(fact(1) == 1);
     static_assert(fact(3) == 6);
 
-    constexpr auto test = meta::recursive_adaptor(meta::make_overload_set([](auto &&self, int n) constexpr -> int {
+    constexpr auto test = doom::meta::recursive_adaptor(doom::meta::make_overload_set([](auto &&self, int n) constexpr -> int {
         if (n <= 1)
             return 1;
         return n * self(n - 1);

@@ -5,7 +5,7 @@
 #ifndef META_UTILS_PAIR_HPP
 #define META_UTILS_PAIR_HPP
 
-namespace meta
+namespace doom::meta
 {
     template <typename T, typename U>
     struct pair

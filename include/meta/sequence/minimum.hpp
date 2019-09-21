@@ -12,7 +12,7 @@
 #include <meta/sequence/size.hpp>
 #include <meta/utils/meta_functions.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

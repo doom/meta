@@ -8,7 +8,7 @@
 #include <utility>
 #include <tuple>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {

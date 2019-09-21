@@ -7,7 +7,7 @@
 
 #include <type_traits>
 
-namespace meta::enum_ops
+namespace doom::meta::enum_ops
 {
     template <typename T>
     struct enable_for : std::false_type
@@ -24,7 +24,7 @@ namespace meta::enum_ops
  * This clearly is meh :/
  */
 #define ENABLE_BITWISE_OPS_FOR(T)                                                                       \
-    namespace meta::enum_ops                                                                            \
+    namespace doom::meta::enum_ops                                                                      \
     {                                                                                                   \
         template <>                                                                                     \
         struct enable_for<T> : std::true_type                                                           \
@@ -34,7 +34,7 @@ namespace meta::enum_ops
 
 #define MAKE_ENUM_BINARY_OPERATOR(op)                                                                   \
     template <typename Enum,                                                                            \
-        typename = std::enable_if_t<std::is_enum_v<Enum> && meta::enum_ops::enable_for_v<Enum>>         \
+        typename = std::enable_if_t<std::is_enum_v<Enum> && doom::meta::enum_ops::enable_for_v<Enum>>   \
     >                                                                                                   \
     constexpr Enum operator op(Enum a, Enum b)                                                          \
     {                                                                                                   \
@@ -53,7 +53,7 @@ MAKE_ENUM_BINARY_OPERATOR(^);
 
 #define MAKE_ENUM_ASSIGN_OPERATOR(op)                                                                   \
     template <typename Enum,                                                                            \
-        typename = std::enable_if_t<std::is_enum_v<Enum> && meta::enum_ops::enable_for_v<Enum>>         \
+        typename = std::enable_if_t<std::is_enum_v<Enum> && doom::meta::enum_ops::enable_for_v<Enum>>   \
     >                                                                                                   \
     constexpr Enum &operator op##=(Enum &a, Enum b)                                                     \
     {                                                                                                   \
@@ -69,7 +69,7 @@ MAKE_ENUM_ASSIGN_OPERATOR(^);
 
 #undef MAKE_ENUM_ASSIGN_OPERATOR
 
-template <typename Enum, typename = std::enable_if_t<std::is_enum_v<Enum> && meta::enum_ops::enable_for_v<Enum>>>
+template <typename Enum, typename = std::enable_if_t<std::is_enum_v<Enum> && doom::meta::enum_ops::enable_for_v<Enum>>>
 constexpr Enum operator~(Enum a)
 {
     using underlying_type = std::underlying_type_t<Enum>;

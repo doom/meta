@@ -10,9 +10,9 @@
 #include <meta/sequence/list.hpp>
 
 using t = std::tuple<int, char, bool>;
-using v = meta::rebind<t, std::variant>;
+using v = doom::meta::rebind<t, std::variant>;
 static_assert(std::is_same_v<v, std::variant<int, char, bool>>);
 
-using lst = meta::list<int, std::allocator<int>>;
-using vec = meta::rebind<lst, std::vector>;
+using lst = doom::meta::list<int, std::allocator<int>>;
+using vec = doom::meta::rebind<lst, std::vector>;
 static_assert(std::is_same_v<vec, std::vector<int, std::allocator<int>>>);

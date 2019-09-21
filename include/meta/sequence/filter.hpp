@@ -12,7 +12,7 @@
 #include <meta/sequence/flatten.hpp>
 #include <meta/sequence/from_list.hpp>
 
-namespace meta
+namespace doom::meta
 {
     namespace details
     {
