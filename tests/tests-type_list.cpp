@@ -184,3 +184,8 @@ static_assert(std::is_same_v<M, doom::meta::list<int, int, int, int, int>>);
 
 static_assert(std::is_same_v<doom::meta::init<int_char_bool>, doom::meta::list<int, char>>);
 static_assert(std::is_same_v<doom::meta::init<doom::meta::list<int>>, doom::meta::list<>>);
+
+using N = doom::meta::reverse<A>;
+static_assert(std::is_same_v<N, doom::meta::list<char, int>>);
+using O = doom::meta::reverse<C>;
+static_assert(std::is_same_v<O, doom::meta::list<float, double, char, int>>);
